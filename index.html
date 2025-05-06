@@ -1,27 +1,65 @@
 <!DOCTYPE html>
-<html>
-<head>
- 
-  <title>Mi Página Web con Tablas</title>
+<HTML lang="es">
+<HEAD>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuando éramos niños: Un viaje al pasado</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
- <iframe width="286" height="147" src="https://w2.countingdownto.com/6261707" frameborder="0"></iframe>
   
+<body>
+  <audio id="audio de fondo" autoplay loop>
+        <source src="intriga2.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+  </audio>
+    <header>
+        <h1>Cuando éramos niños: Un viaje al pasado</h1>
+    </header>
+    <main>
+        <section id="intro">
+            <p>Bienvenidos a esta página donde podrán conocer más sobre la infancia de personas que quizá no reconozcan a primera vista. Cada punto en el mapa interactivo los llevará a una presentación en Canva sobre los hobbies y recuerdos de la infancia de estas personas. ¡Esperamos que disfruten este viaje al pasado!</p>
+        </section>
+        <section id="mapa">
+            <div id="genially-embed">
+                <!-- Código de incrustación de Genially -->
+                <iframe src="https://view.genially.com/67e221605726402cb024e35a/interactive-content-viaje-al-pasado" frameborder="0" allowfullscreen width="100%" height="600px"></iframe>
+            </div>
+        </section>
+        <section id="quiz">
+            <h2>¿Puedes adivinar quién es quién?</h2>
+            <p>Después de ver las presentaciones, intenta adivinar a qué persona corresponde cada foto de niño. Llena la encuesta a continuación:
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc2bqU4Qe5cq11ol1GHcyc8Uh9q99HpWt1CuklG5Ze1286RJw/viewform?usp=preview" class="boton">Ir al Formulario</a>
 
-  <h1>QUE ROLLO PLEBES</h1>
-  <p>COMO VOY A ESTAR MUERTO.</p>
-  <table>
-    <tr>
-      <th>Nombre</th>
-      <th>Apellido</th>
-    </tr>
-    <tr>
-      <td>KEVIN</td>
-      <td>RIVERA</td>
-    </tr>
+    <style>
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
 
-  </table>
-  <form action="http://www.google.com/search" method="get" target="_blank"> <table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"> <tr> <td width="23%" align="right" valign="top"><img src="Imge/Google_Logo.gif" width="128" height="53" alt="Google Logo" /></td> <p> <td width="77%" align="center"> <input type="text" name="q" size=75 maxlength="255" value=""> <input type="submit" name="btnG" value="Buscar En Google"><span style=font-size:-1;><br /></span></td> </tr> </table> <!-- SiteSearch Google --> </form>
+        .boton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+        </section></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Colegio de Bachilleres Cancun Tres Bonfil</p>
+    </footer>
+  <div id="contador"></div>
+    <script>
+        fetch('/contador')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('contador').innerText = `Esta página ha sido visitada ${data.visitas} veces.`;
+            });
+    </script>
 </body>
-
 </html>
