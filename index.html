@@ -6,7 +6,21 @@
 </head>
 <body>
  <iframe width="286" height="147" src="https://w2.countingdownto.com/6261707" frameborder="0"></iframe>
+  <p>Visitas: 
+        <?php
+        $archivo = "contador.txt";
 
+        if (!file_exists($archivo)) {
+            file_put_contents($archivo, "0");
+        }
+
+        $contador = file_get_contents($archivo);
+        $contador++;
+        file_put_contents($archivo, $contador);
+
+        echo $contador;
+        ?>
+    </p>
 
   <h1>QUE ROLLO PLEBES</h1>
   <p>COMO VOY A ESTAR MUERTO.</p>
