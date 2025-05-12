@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fondo</title>
+    <style>
+        body {
+            background-color: pink; /* Cambia el color aquí */
+        }
+    </style>
+  <title>Mi Página Web con Tablas</title>
+</head>
+<body>
+ <iframe width="286" height="147" src="https://w2.countingdownto.com/6261707" frameborder="0"></iframe>
+
+
+  <h1>QUE ROLLO PLEBES</h1>
+  <p>COMO VOY A ESTAR MUERTO.</p>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+    </tr>
+    <tr>
+      <td>KEVIN</td>
+      <td>RIVERA</td>
+    </tr>
+
+  </table>
+ <form action="http://www.google.com/search" method="get" target="_blank"> <table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"> <tr> <td width="23%" align="right" valign="top"><img src="Imge/Google_Logo.gif" width="128" height="53" alt="Google Logo" /></td> <p> <td width="77%" align="center"> <input type="text" name="q" size=75 maxlength="255" value=""> <input type="submit" name="btnG" value="Buscar En Google"><span style=font-size:-1;><br /></span></td> </tr> </table> <!-- SiteSearch Google --> </form>
+  <style>
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .boton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+        </section></p>
+    </main>
+    <footer>
+        <p>&copy; 2025 Colegio de Bachilleres Cancun Tres Bonfil</p>
+    </footer>
+  <div id="contador"></div>
+    <script>
+        fetch('/contador')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('contador').innerText = `Esta página ha sido visitada ${data.visitas} veces.`;
+            });
+    </script>
+</body>
+
+</html>
