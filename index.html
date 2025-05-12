@@ -1,15 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=9.0">
-    <title>Botón de Redirección</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Centrado</title>
+    <style>
+        /* Estilos para centrar el botón */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Toma toda la altura de la pantalla */
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-   
-    
-    <!-- Botón que redirige a otra página -->
-    <button onclick="window.location.href='pagina2.html';">Ir a otra página</button>
+
+    <button onclick="alert('¡Botón presionado!')">Haz clic aquí</button>
 
 </body>
 </html>
