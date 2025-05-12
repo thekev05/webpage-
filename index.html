@@ -30,11 +30,44 @@
             background-color: #0056b3;
         }
     </style>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        #contador {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
 
     <button onclick="window.location.href='pagina2.html';"">tralalero</button>
+<p id="contador">0</p>
+    <p>veces.</p>
 
+    <script>
+        // Obtener el número de visitas del almacenamiento local
+        let visitas = localStorage.getItem("contadorVisitas");
+
+        // Si no hay un valor almacenado, inicializar en 0
+        if (visitas === null) {
+            visitas = 0;
+        }
+
+        // Incrementar el contador
+        visitas++;
+
+        // Guardar el nuevo valor en el almacenamiento local
+        localStorage.setItem("contadorVisitas", visitas);
+
+        // Mostrar el contador en la página
+        document.getElementById("contador").textContent = visitas;
+    </script>
 </body>
 </html>
 
