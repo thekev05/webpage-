@@ -4,95 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practica 2 Kevin Rivera Mendez</title>
+    <title>Página con Botón, Contador y Fondo</title>
     <style>
-        /* Estilos para centrar el botón */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* Toma toda la altura de la pantalla */
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-     <style>
-        body {
-            background-image: url('imagen repo.jpeg'); /* Reemplaza con tu imagen */
-            background-size: cover; /* Ajusta el tamaño para cubrir toda la pantalla */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat; /* Evita la repetición */
-            height: 100vh; /* Ocupa toda la pantalla */
-            margin: 0;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-            padding-top: 50px;
-        }
-    </style>
-   <style>
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            margin-top: 50px;
+            background-image: url('imagen.jpg'); /* Cambia 'imagen.jpg' por la ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white; /* Ajusta el color del texto para que sea visible */
         }
-
-        #contador {
-            font-size: 24px;
-            font-weight: bold;
-            color: #007bff;
+        .boton {
+            margin-top: 20%;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contador {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <button onclick="window.location.href='pagina2.html';">tralalero</button>
- 
-    
-    
-    
-    
-    
-    <p id="contador">0</p>
-    <p>veces.</p>
+    <button class="boton" onclick="window.location.href='https://www.ejemplo.com';">Ir a otra página</button>
+
+    <div class="contador">
+        <p>Visitas: <span id="visitas"></span></p>
+    </div>
 
     <script>
-        // Obtener el número de visitas del almacenamiento local
-        let visitas = localStorage.getItem("contadorVisitas");
-
-        // Si no hay un valor almacenado, inicializar en 0
-        if (visitas === null) {
-            visitas = 0;
+        if (!localStorage.getItem('contador')) {
+            localStorage.setItem('contador', 0);
         }
-
-        // Incrementar el contador
-        visitas++;
-
-        // Guardar el nuevo valor en el almacenamiento local
-        localStorage.setItem("contadorVisitas", visitas);
-
-        // Mostrar el contador en la página
-        document.getElementById("contador").textContent = visitas;
+        let visitas = parseInt(localStorage.getItem('contador')) + 1;
+        localStorage.setItem('contador', visitas);
+        document.getElementById('visitas').innerText = visitas;
     </script>
+
 </body>
 </html>
-
 
    
     
