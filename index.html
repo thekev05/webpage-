@@ -33,22 +33,7 @@
     </style>
 </head>
 <body>
- <audio src="musica1.mp3" autoplay loop></audio> 
-    <button class="boton" onclick="window.location.href='pagina2.html';">Ir a otra página</button>
-
-    <div class="contador">
-        <p>Visitas: <span id="visitas"></span></p>
-    </div>
-
-    <script>
-        if (!localStorage.getItem('contador')) {
-            localStorage.setItem('contador', 0);
-        }
-        let visitas = parseInt(localStorage.getItem('contador')) + 1;
-        localStorage.setItem('contador', visitas);
-        document.getElementById('visitas').innerText = visitas;
-    </script>
-        
+ <video src="ruta_del_video.mp4" autoplay></video>
 </body>
 </html>
 
