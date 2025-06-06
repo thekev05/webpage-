@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -32,15 +33,24 @@
     </style>
 </head>
 <body>
- <video src="video2.mp4" autoplay></video>
-   
+ <audio src="musica1.mp3" autoplay loop></audio> 
+    <button class="boton" onclick="window.location.href='pagina2.html';">Ir a otra página</button>
+
+    <div class="contador">
+        <p>Visitas: <span id="visitas"></span></p>
+    </div>
+
+    <script>
+        if (!localStorage.getItem('contador')) {
+            localStorage.setItem('contador', 0);
+        }
+        let visitas = parseInt(localStorage.getItem('contador')) + 1;
+        localStorage.setItem('contador', visitas);
+        document.getElementById('visitas').innerText = visitas;
+    </script>
+        
 </body>
 </html>
-
- <video src="video1.mp4" autoplay></video>
-
-   
-    
     
 
 
